@@ -13,7 +13,7 @@
 * This is a single view of a calendar modal component of the web application.
 
 <p align="center">
-   <img src="src/assets/homeCalendar.jpeg" />
+   <img src="src/assets/home.png" />
 </p>
 
 # :runner: Getting Started
