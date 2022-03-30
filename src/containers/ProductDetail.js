@@ -5,6 +5,7 @@ import {
   fetchProduct,
   removeSelectedProduct,
 } from "../redux/actions/productActions";
+import Loading from "../animation/loading";
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
@@ -18,12 +19,12 @@ const ProductDetail = () => {
     return () => {
       dispatch(removeSelectedProduct());
     };
-  }, []);
+  }, [dispatch, productId]);
 
   return (
     <div className="ui grid container">
       {Object.keys(product).length === 0 ? (
-        <div>...Loading</div>
+        <Loading/>
       ) : (
         <div className="ui placeholder segment">
           <div className="ui two column stackable center aligned grid">
